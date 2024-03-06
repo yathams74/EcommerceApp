@@ -7,6 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>EcommerceApp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     
      <dependency>
@@ -78,7 +79,23 @@
     
     
   </dependencies>
-  <build>
+   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version> <!-- Use the version you prefer -->
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+       <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-war-plugin</artifactId>
+      <version>3.2.3</version>
+    </plugin>
+    </plugins>
     <finalName>EcommerceApp</finalName>
   </build>
 </project>
